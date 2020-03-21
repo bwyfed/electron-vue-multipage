@@ -8,7 +8,7 @@ UninstPage uninstConfirm
 UninstPage instfiles
 
 ; Name "Mercurius"
-InstallDir "D:\Program Files\Mercurius\"
+; InstallDir "D:\Program Files\Mercurius\"
 ; InstallDir "$PROGRAMFILES\signjing安装示例"
 
 Section "Installer Section"
@@ -17,6 +17,7 @@ SectionEnd
 
 Function "myGuiInit"
   DetailPrint "onGUIInit"
+  StrCpy $INSTDIR "D:\Program Files\Mercurius\"
 FunctionEnd
 
 Function .onInstSuccess
