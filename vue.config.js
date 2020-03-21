@@ -19,6 +19,12 @@ module.exports = {
           // output: 'release'
         },
         asar: false,
+        extraResources: [
+          {
+            from: './source',
+            to: './dest'
+          }
+        ],
         win: {
           icon: 'resources/icon.ico',
           target: ['nsis']
@@ -26,8 +32,8 @@ module.exports = {
         nsis: {
           oneClick: false,
           language: '2052',
-          perMachine: true,
-          allowToChangeInstallationDirectory: true
+          perMachine: true
+          // allowToChangeInstallationDirectory: true
         }
       }
     }
